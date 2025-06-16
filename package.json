@@ -9,17 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.6",
-    "@astrojs/mdx": "^4.2.4",
+    "@astrojs/alpinejs": "^0.4.8",
+    "@astrojs/mdx": "^4.3.0",
     "@playform/inline": "^0.1.2",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.4",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.9",
-    "astro": "^5.7.4",
+    "astro": "^5.9.1",
     "glightbox": "^3.3.0",
     "masonry-layout": "^4.2.2",
     "swiper": "^11.1.15",
+    "tailwind-clip-path": "^1.0.0",
     "tailwindcss": "^4.1.4"
   }
 }

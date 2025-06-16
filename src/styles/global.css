@@ -3,8 +3,13 @@
 
 @theme {
 	--font-inter: "Inter", "sans-serif";
+	--font-tangerine: "Tangerine", "Tangerine";
 	--color-brand-green: #157f71;
 	--color-brand-red: #db1d00;
+	--color-brand-grey: #E1E1E1;
+	--color-brand-sand: #FBF5E7;
+	--color-brand-black: #2F2B26;
+	--color-brand-white: #FFFEF9;
 }
 
 @utility container {
@@ -212,6 +217,20 @@ label {
 /* Swiper */
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
 	@apply bg-brand-red;
+}
+
+h1.fancy-title {
+  @apply text-5xl text-brand-green;
+  font-family: var(--font-tangerine);
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: "Tangerine";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/tangerine/tangerine-regular.woff2") format("woff2");
 }
 
 /* inter-300 - latin */
