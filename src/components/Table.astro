@@ -1,0 +1,82 @@
+<!-- TrophyPricingTable.astro -->
+<!-- Clean, dependency‑free trophy price table with custom colour palette -->
+
+---
+interface Row { weight: string; eur: number; eurPerGram?: number | string }
+
+const rows: Row[] = [
+  { weight: "< 149", eur: 100 },
+  { weight: "150 – 249", eur: 150 },
+  { weight: "250 – 299", eur: 250, eurPerGram: 2 },
+  { weight: "300 – 349", eur: 350, eurPerGram: 5 },
+  { weight: "350 – 399", eur: 600, eurPerGram: 6 },
+  { weight: "400 – 449", eur: 900, eurPerGram: 18 },
+  { weight: "450 – 499", eur: 1800, eurPerGram: 30 },
+  { weight: "> 500", eur: 3300, eurPerGram: 45 },
+];
+---
+
+<div class="overflow-x-auto max-w-full">
+    <div class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Őzbak árlista</div>
+  <table class="min-w-full border border-gray-300 text-sm md:text-base border-separate border-spacing-0">
+    <thead>
+      <tr>
+        <th class="px-4 py-3 text-left">Trófeasúly (g)</th>
+        <th class="px-4 py-3 text-right">EUR</th>
+        <th class="px-4 py-3 text-right">EUR/g</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          <td class="px-4 py-3 text-left border-r border-gray-300 whitespace-nowrap">{row.weight}</td>
+          <td class="px-4 py-3 text-right border-r border-gray-300">{row.eur.toLocaleString('hu-HU')}</td>
+          <td class="px-4 py-3 text-right">{row.eurPerGram ?? ''}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+:root {
+  /* Colour palette based on #979491 */
+  --header-bg: #979491;     /* main header background */
+  --row-even-bg: #f2f2f1;   /* subtle tint for even rows */
+  --row-odd-bg: #ffffff;    /* plain white for odd rows */
+  --row-hover-bg: #cac9c7;  /* highlight on hover/select */
+}
+
+/* Header styling */
+thead tr {
+  background: var(--header-bg);
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(odd) {
+  background: var(--row-odd-bg);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--row-even-bg);
+}
+
+/* Hover / selection */
+tbody tr:hover {
+  background: var(--row-hover-bg);
+  transition: background 0.2s ease;
+}
+
+/* Vertical separators (except last col) */
+th,
+ td {
+  border-right: 1px solid #d1d5db;
+}
+
+th:last-child,
+ td:last-child {
+  border-right: none;
+}
+</style>

@@ -3,37 +3,34 @@ import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
 import { Picture } from "astro:assets";
-import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Article from "~/components/Article.astro";
 
 // Images
-import PizzaHero from "~/assets/images/pizza-hero.png";
+import Badge from "~/assets/images/logo_round.png";
 ---
 
 <Layout>
-	<Section class:list={"bg-white"}>
+	<Section class:list={["bg-brand-sand"]}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<!-- <Badge title="il ristorante italiana" /> -->
-				<h1 class="font-black">Üdvözöljük a Toronykakas Vadásztársaság oldalán!</h1>
+				<h1 class="font-tangerine">Üdvözöljük a Toronykakas Vadásztársaság oldalán!</h1>
 
 				<p>
 					Szenvedélyünk a vadászat, elkötelezettségünk a természet iránti tisztelet. Csatlakozzon hozzánk közös vadászatokra, fedezze fel programjainkat, és legyen része közösségünknek!
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
-
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
+					<Button url="/offers">Ajánlataink</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={PizzaHero}
+					src={Badge}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."

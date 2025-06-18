@@ -10,11 +10,11 @@ const rmTrailingSlash = (path: string): string => {
 const pathname = rmTrailingSlash(Astro.url.pathname);
 ---
 
-<header x-data="{ open: false }" @keydown.window.escape="open = false">
+<header class="bg-brand-grey" x-data="{ open: false }" @keydown.window.escape="open = false">
 	<div class="container py-6">
 		<nav class="flex items-center justify-between" aria-label="Global">
 			<a href="/" class="-m-1.5 p-1.5">
-				<p class="font-tangerine text-5xl text-brand-green">
+				<p class="font-tangerine text-5xl">
 					Toronykakas
 					<span
 						class="block sm:inline /5 px-3 ml-0 sm:ml-1 rounded-lg"
@@ -127,4 +127,5 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 			</div>
 		</div>
 	</div>
+
 </header>

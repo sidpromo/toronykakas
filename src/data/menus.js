@@ -1,34 +1,35 @@
 export const menuMain = [
     {
-        name: "Home",
+        name: "Kezdőoldal",
         url: "/",
         highlighted: false,
     },
     {
-        name: "Menu",
-        url: "/menu",
+        name: "Ajánlataink",
+        url: "/offers",
         highlighted: false,
     },
     {
-        name: "About Us",
+        name: "Rólunk",
         url: "/about-us",
         highlighted: false,
     },
     {
-        name: "Gallery",
+        name: "Galéria",
         url: "/gallery",
         highlighted: false,
     },
     {
-        name: "Contact",
+        name: "Kapcsolat",
         url: "/contact",
         highlighted: false,
-    },
-    {
-        name: "Book",
-        url: "/book",
-        highlighted: true,
-    },
+    }
+    // ,
+    // {
+    //     name: "Book",
+    //     url: "/book",
+    //     highlighted: true,
+    // },
 ];
 
 export const footerPrimary = [
