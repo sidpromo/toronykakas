@@ -1,32 +1,32 @@
 [
 	{
 		"id": 1,
-		"title": "pexels-adrienn",
+		"title": "Nyári est a vadászterületen",
 		"image": "/src/assets/images/gallery/20240710_201146.jpg",
-		"alt": "pexels-adrienn-638530-1537635"
+		"alt": "Nyári est a vadászterületen, 2024 július"
 	},
 	{
 		"id": 2,
-		"title": "pexels-annija-mieze",
+		"title": "Augusztusi alkonyat",
 		"image": "/src/assets/images/gallery/20240807_214502.jpg",
-		"alt": "pexels-annija-mieze-427042079-15197931"
+		"alt": "Augusztusi alkonyat a területen, 2024"
 	},
 	{
 		"id": 3,
-		"title": "pexels-enginakyurt",
+		"title": "Vadászat augusztusban",
 		"image": "/src/assets/images/gallery/20240814_182907.jpg",
-		"alt": "pexels-enginakyurt-1487511"
+		"alt": "Vadászat augusztusban, 2024"
 	},
 	{
 		"id": 4,
-		"title": "pexels-fariphotography",
+		"title": "Nyári vadászélmény",
 		"image": "/src/assets/images/gallery/20240815_192236.jpg",
-		"alt": "pexels-fariphotography-905847"
+		"alt": "Nyári vadászélmény, 2024 augusztus"
 	},
 	{
 		"id": 5,
-		"title": "pexels-narda-yescas",
+		"title": "Tavaszi pillanatkép",
 		"image": "/src/assets/images/gallery/20250511_195227(1)(1).jpg",
-		"alt": "pexels-narda-yescas-724842-1566837"
+		"alt": "Tavaszi pillanatkép a vadászterületről, 2025"
 	}
 ]
