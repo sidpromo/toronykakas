@@ -3,9 +3,26 @@ import "~/styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import Header from "~/components/Header.astro";
 import Footer from "~/components/Footer.astro";
-const { pageTitle, title, description } = Astro.props;
-const baseUrl = `${Astro.url.protocol}//${Astro.url.host}`;
-import { siteLang, themeColor } from "~/data/config";
+const { title, description } = Astro.props;
+import { siteLang, siteName, themeColor, siteDomain, phone, address, siteSlogan } from "~/data/config";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || `https://${siteDomain}`);
+const pageTitle = title ? `${title} | ${siteName}` : siteName;
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": siteName,
+	"description": siteSlogan,
+	"url": `https://${siteDomain}`,
+	"telephone": phone.label,
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": address.city,
+		"addressRegion": address.state,
+		"addressCountry": "HU",
+	},
+};
 ---
 
 <!doctype html>
@@ -17,50 +34,18 @@ import { siteLang, themeColor } from "~/data/config";
 		<meta name="description" content={description} />
 		<meta name="robots" content="index,follow" />
 		<meta name="googlebot" content="index,follow" />
+		<link rel="canonical" href={canonicalURL.href} />
 		<link rel="author" href="humans.txt" />
 
-		<!-- <link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/images/favicon/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/images/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="/images/favicon/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
-		<link
-			rel="mask-icon"
-			href="/images/favicon/safari-pinned-tab.svg"
-			color="#E6F4FF"
-		/> -->
-		<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
-
-		<meta name="msapplication-TileColor" content="#ffffff" />
-
-		<meta property="og:url" content={Astro.url} />
+		<meta property="og:url" content={canonicalURL.href} />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:image" content={`${baseUrl}/images/og-image.jpg`} />
+		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={description} />
-		<meta property="og:site_name" content="WP Infusion" />
+		<meta property="og:site_name" content={siteName} />
 		<meta property="og:locale" content={siteLang} />
 
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:url" content={Astro.url} />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<!-- <meta name="twitter:image" content={`${baseUrl}/images/og-image.jpg`} /> -->
 		<title>{pageTitle}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 		<ClientRouter />
 	</head>
 	<body>

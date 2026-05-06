@@ -1,10 +1,10 @@
 // Global variables
-export const siteLang = "en-US";
-export const siteCurrency = "USD";
-export const siteDomain = "astropie.com";
-export const siteName = "Toronykakas vt";
-export const siteSlogan = "The best pies in the galaxy!";
-export const themeColor = "#FF0000";
+export const siteLang = "hu";
+export const siteCurrency = "HUF";
+export const siteDomain = "toronykakas.hu";
+export const siteName = "Toronykakas Vadásztársaság";
+export const siteSlogan = "Szenvedélyünk a vadászat, elkötelezettségünk a természet iránti tisztelet.";
+export const themeColor = "#2d5016";
 
 export const phone = {
 	href: "tel:+36702902551",
@@ -12,47 +12,26 @@ export const phone = {
 };
 
 export const email = {
-	href: "mailto:info@astropie.com",
-	label: "info@astropie.com",
+	href: "mailto:toronykakasvt@gmail.com",
+	label: "toronykakasvt@gmail.com",
 };
 
 export const address = {
-	street: "1234 Space Street",
-	city: "Galaxy City",
-	zip: "12345",
-	state: "Milky Way",
-	country: "Space",
+	street: "",
+	city: "Besnyő",
+	zip: "",
+	state: "Fejér megye",
+	country: "Magyarország",
 };
 
-export const socialMedia = {
-	facebook: {
-		url: "https://facebook.com",
-		label: "Facebook",
-		icon: "facebook",
-	},
-	twitter: {
-		url: "https://twitter.com",
-		label: "Twitter",
-		icon: "twitter",
-	},
-	instagram: {
-		url: "https://instagram.com",
-		label: "Instagram",
-		icon: "instagram",
-	},
-	youtube: {
-		url: "https://youtube.com",
-		label: "YouTube",
-		icon: "youtube",
-	},
-};
+export const socialMedia = {};
 
 export const hours = {
-	monday: "9:00 - 17:00",
-	tuesday: "9:00 - 17:00",
-	wednesday: "9:00 - 17:00",
-	thursday: "9:00 - 17:00",
-	friday: "9:00 - 17:00",
-	saturday: "9:00 - 17:00",
-	sunday: "Closed",
+	monday: "Telefonon elérhető",
+	tuesday: "Telefonon elérhető",
+	wednesday: "Telefonon elérhető",
+	thursday: "Telefonon elérhető",
+	friday: "Telefonon elérhető",
+	saturday: "Telefonon elérhető",
+	sunday: "Telefonon elérhető",
 };

@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 const gallery = await getCollection("gallery");
 ---
 
-<Layout>
+<Layout title="Galéria" description="Képgaléria a Toronykakas Vadásztársaság vadászatairól és rendezvényeiről.">
 	<Section class:list={"[&>.container]:pb-0"}>
 		<Heading>
 			<h1 slot="heading-title" class="font-tangerine h2">

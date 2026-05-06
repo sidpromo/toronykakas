@@ -4,18 +4,19 @@ import tailwindcss from "@tailwindcss/vite";
 import alpinejs from "@astrojs/alpinejs";
 import playformInline from "@playform/inline";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astropie.netlify.app",
+	site: "https://toronykakas.hu",
 	base: "/",
-	// trailingSlash: 'always',
 	integrations: [
 		alpinejs(),
 		playformInline({
 			Beasties: true,
 		}),
 		mdx(),
+		sitemap(),
 	],
 	output: "static",
 	devToolbar: {
