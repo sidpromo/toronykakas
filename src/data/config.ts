@@ -1,7 +1,7 @@
 // Global variables
 export const siteLang = "hu";
 export const siteCurrency = "HUF";
-export const siteDomain = "toronykakas.hu";
+export const siteDomain = "toronykakasvt.hu";
 export const siteName = "Toronykakas Vadásztársaság";
 export const siteSlogan = "Szenvedélyünk a vadászat, elkötelezettségünk a természet iránti tisztelet.";
 export const themeColor = "#2d5016";
