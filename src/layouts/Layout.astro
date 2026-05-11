@@ -11,7 +11,7 @@ const pageTitle = title ? `${title} | ${siteName}` : siteName;
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "Organization",
+	"@type": "LocalBusiness",
 	"name": siteName,
 	"description": siteSlogan,
 	"url": `https://${siteDomain}`,
@@ -22,6 +22,12 @@ const jsonLd = {
 		"addressRegion": address.state,
 		"addressCountry": "HU",
 	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": 47.1833,
+		"longitude": 18.6667,
+	},
+	"areaServed": "Besnyő, Velence, Székesfehérvár, Fejér megye",
 };
 ---
 
