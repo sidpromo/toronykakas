@@ -6,6 +6,12 @@
 
 ---
 
+## 🌐 Live Site
+
+**[https://toronykakasvt.hu](https://toronykakasvt.hu)** – deployed via Netlify
+
+---
+
 ## 🚀 Quick Start
 
 ```bash
